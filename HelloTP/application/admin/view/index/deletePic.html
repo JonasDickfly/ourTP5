@@ -1,0 +1,22 @@
+{layout name="layout" /}
+<form id='form1' name='form1' method='post' action='delete_image'>
+    <select name='pic' id='pic' >
+        <option value="">请选择图片</option>
+        {foreach name="images" item="data"}
+            {if condition="($data!='.') and ($data!='..') "}
+                <option value='{$data}'>{$data}</option>
+            {/if}
+        {/foreach}
+    </select>
+    <p>
+    <img id='img1' name='img1' width='200px' height='200px' src='#' />
+    </p>
+    <input type="submit" name="submit" value="删除图片" onclick="return confirm('确定要删除吗？');"/>    
+</form>
+<script type="text/javascript">
+    window.onload=function(){
+      document.getElementById("pic").addEventListener("change", function(){
+        document.getElementById("img1").src = "../../../static/upload/"+document.getElementById("pic").value;
+    });
+    }
+</script>

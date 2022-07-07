@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>管理员首面</title>
+    <link rel="stylesheet" type="text/css" href="/HelloTP/public/static/css/index.css" />        
+</head>
+<body>
+    <div class="top">
+        <header align="right">
+            {notempty name="$Request.session.adminName"}
+            欢迎您：{$Request.session.adminName} 
+            <a href="{:Url('admin/index/logout')}">退出</a>
+            {/notempty}	
+            {empty name="$Request.session.adminName"}
+            <script>alert('你还没登录，请先登录!');window.location.href= "{:Url('admin/index/login')}";</script>
+            {/empty}
+        </header>
+    </div>
+        
+    <div class="content">
+        <div class="cmain">
+            <div class="nav" align="center">管理员首页导航条</div>
+
+            <div class="cleft">
+                <p>管理员信息管理</p>
+                <p><a href="{:Url('admin/index/adminNew')}">增加管理员</a></p>
+                <p><a href="{:Url('admin/index/adminMaint')}">维护管理员</a></p>
+                <p>商品信息管理</p>
+                <p><a href="{:Url('admin/product/productNew')}">增加商品</a></p>
+                <p><a href="{:Url('admin/product/index')}">维护商品</a></p>
+            
+                <p>上传管理</p>
+                <p><a href="{:Url('admin/index/uploadPic')}">上传商品图片</a></p>
+                <p><a href="{:Url('admin/index/deletePic')}">删除商品图片</a></p>		
+                <p>订单管理</p>
+                <p><a href="{:Url('admin/orders/index')}">所有订单</a></p>
+                <p><a href="{:Url('admin/orders/orders0')}">待付款订单</a></p>
+                <p><a href="{:Url('admin/orders/orders1')}">待发货订单</a></p>
+                <p><a href="{:Url('admin/orders/orders2')}">待收货订单</a></p>     
+            </div>
+            <div class="cright">
+                {__CONTENT__}
+            </div>
+        </div>
+    </div>
+        
+    <footer align="center">版权所有&copy;网工201第六组</footer>
+</body>
+</html>
+    

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+</head>
+<body>
+<form method="post" action="{:Url('user/index/registerCheck')}">
+<table width="600px"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+ <tr>
+    <td width="100px" align="center">用户名：</td>
+    <td height="30px">
+    <input name="uname" type="text" id="uname" size="40" >
+    <font color="red">*</font> </td>
+ </tr>      
+<tr>
+    <td height="30" align="center">密码：</td>
+    <td><input name="upwd"  size="40" id="upwd" type="password" required="true" minlength="3" />
+    <font color="red">*</font></td>
+</tr>
+<tr>
+    <td height="30" align="center">重复密码：</td>
+    <td><input name="upwd1"  size="40" id="upwd1" type="password" required="true" minlength="3" />
+    <font color="red">*</font></td>
+    </tr><tr>
+    <td height="30" align="center">性别：</td>
+    <td>
+    <input type="radio" id="usex1" name="usex" value="男" checked />男
+    <input type="radio" id="usex2" name="usex" value="女" />女
+    </td>
+</tr><tr>
+    <td height="30" align="center">爱好：</td>
+    <td><input name="uhobby" type="text"  size="40" id="uhobby"/></td>
+</tr><tr>
+    <td height="30" align="center">省份：</td>
+    <td>
+    <select id="uprovince" name="uprovince" required="true">
+<option value="">请选择</option>
+<option value="浙江">浙江</option>
+<option value="上海">上海</option>
+<option value="江苏">江苏</option>
+</select>    </td></tr><tr>
+    <td height="30" align="center">Email：</td>
+    <td><input name="uemail" type="text"  size="40" id="uemail" email="true" /></td>
+</tr><tr>
+        <td height="40" colspan="2" align="center">
+<input name="Submit" type="submit" value="立即注册" >
+<input type="reset" name="Submit2" value="重置">
+</td> </tr>
+   </table>
+</form>
+
+</body>
+</html>

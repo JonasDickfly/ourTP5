@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>管理员登录</title>
+    <link rel="stylesheet" type="text/css" href="/HelloTP/public/static/css/login.css" />
+    
+</head>
+<body>
+<header align="right">
+    {notempty name="$Request.session.adminName"}
+    欢迎您：{$Request.session.adminName} 
+    <a href="{:Url('admin/index/logout')}">退出</a>
+    {/notempty}
+    {empty name="$Request.session.adminName"}
+    <a href="{:Url('admin/index/login')}">登录</a>
+    <a href="{:Url('admin/index/register')}">注册</a>
+    {/empty}
+</header>
+<form action="{:Url('admin/index/loginCheck')}" method="post" >
+    <table width="300" height="208" border="0" cellpadding="0" cellspacing="0" >
+        <tr>
+            <td colspan="2" height="40" align="center">
+                <h1>管理员登录</h1>
+            </td>
+        </tr>
+        <tr>
+            <td height="25" align="right">管理员名：</td>
+            <td>
+                <input type="text" name="adminName"></input>
+            </td>
+        </tr>
+        <tr>
+            <td height="25" align="right">密码：</td>
+            <td>
+                <input type="password" name="adminPwd"></input>
+            </td>
+        </tr>
+        <tr>
+            <td height="25" align="right">验证码：</td>
+            <td ><input type="text" name="yzm" placeholder="填写右侧的验证码" required="true"  style="width: 200px;"/></td>
+        </tr>
+        <tr>    
+            <td align="right"><img src="{:Url('admin/index/show_yzm')}" alt="" title="看不清？点击换一个" width="121" height="32" onclick="this.src=this.src+'?'"/></td>
+            <td >&nbsp;双击图片换一张</td>
+        </tr>
+        <tr>
+            <td height="40" colspan="2" align="center">
+                <input name="Submit" type="submit" class="btn" value="登录" >
+                <input type="reset" name="Submit2" class="btn" value="重置">
+            </td>
+        </tr>
+    </table>
+</form>
+<footer align="center">
+    版权所有&copy;网工201第六组
+</footer>
+</body>
+</html>

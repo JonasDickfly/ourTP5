@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/HelloTP/public/static/css/index.css" />
+    <title>首页</title>
+    <style>
+        li{list-style:none;width:33.333%;float:left;}
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <header align="right">
+            {notempty name="$Request.session.username"}
+            欢迎您：{$Request.session.username} 
+            <a href="{:Url('user/index/logout')}">退出</a>
+            {/notempty}
+            {empty name="$Request.session.username"}
+            <a href="{:Url('user/index/login')}">登录</a>
+            <a href="{:Url('user/index/register')}">注册</a>
+            {/empty}	
+
+            <table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                <tr>
+                    <td colspan="2" height="20px" align="center" bgcolor="white">
+                    <a href="index.php">前台首页</a> &nbsp; &nbsp; &nbsp; &nbsp; 
+                    <a href="./customer/index.php">会员首页</a> &nbsp; &nbsp; &nbsp; &nbsp;
+        
+                    <a href="search.php">搜索</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="{:Url('user/index/shoppingcar')}">我的购物车</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="{:Url('user/index/orders')}">我的订单</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </header>
+    </div>
+    <div class="content">
+        <div class="cmain">
+            <div class="nav" align="center">
+            会员首页导航条
+            </div>
+            <div class="cleft">
+                <p></p>
+                <p><a href="{:Url('user/index/shoppingcar')}">我的购物车</a></p>
+                <p><a href="{:Url('user/index/orders')}">我的订单</a></p>
+                <p><a href="{:Url('user/index/account')}">我的账户</a></p>
+                <p><a href="#">...</a></p>
+            </div>
+            <div class="cright">
+                
+            </div>
+        </div>
+    </div> 
+    <footer align="center">版权所有&copy;网工201第六组</footer>
+</body>
+</html>
