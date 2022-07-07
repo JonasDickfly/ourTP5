@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background: url(/HelloTP/public/static/images/LoginBackground.jpeg) no-repeat;
+    
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 100vw;
+} 
+
+a{
+    color: rgb(100, 200, 70);
+}
+a:hover{
+    color: tomato;
+}
+p{
+    margin: 1em;
+    border-bottom: 1px dashed black;
+    color: white;
+}
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100vw;
+    height: 80px;/*改这个就行*/
+    margin: 0 auto;
+}
+header{
+    flex: 1 100%;
+    background: rgba(0,0,0,0.5);
+    
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    margin: 0 auto;
+}
+.nav{
+    flex: 1 100%;
+    background: white;
+    height: 40px;
+    margin: 0 auto;
+
+}
+footer{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.content{
+    flex:1 100%;
+    /*overflow: hidden;关键*/
+    height: 1200px;
+    margin: 0px auto;
+}
+.cmain{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+.cleft{
+    flex: 1;
+    height: 800px;
+    background: rgba(0,0,0,0.5);
+}
+.cright{
+    flex: 4;
+    background: rgba(255,255,255,0.7);
+    padding-left: 5px;
+
+}
