@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background: url(../images/LoginBackground.jpeg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+header{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+footer{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+a{
+    color: rgb(100, 200, 70);
+}
+a:hover{
+    color: tomato;
+}
+
+form{
+    /* 关键 */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    height: 500px;
+    width: 500px;
+    background: rgba(100,200,255,0.4);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+input{
+    background-color: whitesmoke;
+    width: 60%;
+    height: 30px;
+    border-radius: 8px;
+    
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid silver;
+    outline: none;
+
+    font-size: 20px;
+}
+#checkbox{
+    width: 10%;
+}
+.btn {
+    background-color: #fff;
+    width: 38%;
+    height: 48px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: tomato;
+}
+table tr td{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    height: 25px;
+}
